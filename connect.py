@@ -4,11 +4,11 @@ import pandas as pd
 import csv
 
 # connect to PostgreSQL
-conn = 'postgresql://thh:root@127.0.0.1:61157/postdb'
+conn = 'postgresql://thh:root@127.0.0.1:57675/postdb'
 
 db_connection = create_engine(conn)
 
-csv_file_paths = ["C:\\Users\\huyho\\OneDrive\\Desktop\\Postgres\\hrloc.csv", "C:\\Users\\huyho\\OneDrive\\Desktop\\Postgres\\hrjbtl.csv", "C:\\Users\\huyho\\OneDrive\\Desktop\\Postgres\\humres.csv"]
+csv_file_paths = ["C:\\Users\\Huy Hoang\\Desktop\\Postgres\\hrloc.csv", "C:\\Users\\Huy Hoang\\Desktop\\Postgres\\hrjbtl.csv", "C:\\Users\\Huy Hoang\\Desktop\\Postgres\\humres.csv"]
 table_names = ["hrloc", "hrjbtl", "humres"]
 
 for csv_file_path, table_name in zip(csv_file_paths, table_names):
