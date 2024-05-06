@@ -21,15 +21,7 @@ spec:
           envFrom:
             - configMapRef:
                 name: postgres-secret
-          volumeMounts:
-            - mountPath: /var/lib/postgresql/data
-              name: postgresdata
-  volumeClaimTemplates:
-  - metadata:
-      name: postgresdata
-    spec:
-      accessModes: 
-        - ReadWriteOnce
-      resources:
-        requests:
-          storage: 1Gi   
+      volumes:
+      - name: postgresdata
+        persistentVolumeClaim:
+          claimName: postgres-pvc   
