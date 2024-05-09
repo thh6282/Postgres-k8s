@@ -16,14 +16,22 @@ Install according to the link: https://kubernetes.io/docs/tasks/tools/install-ku
 
 
 3. Deployment a postgres in minikube:
-- From a terminal start cluster:`minikube start`
-- Create a namespace to contain postgres named postgres: `kubectl create ns postgres`
+- From a terminal start cluster:
+```
+`minikube start`
+```
+- Create a namespace to contain postgres named postgres:
+```
+`kubectl create ns postgres`
+```
 - Apply files .yaml to deploy postgres:
+```
 `kubectl apply -f configmap.yaml -n postgres`
 `kubectl apply -f PersistentVolume.yaml -n postgres`
 `kubectl apply -f PersistentVolumeClaim.yaml -n postgres`
 `kubectl apply -f StatefulSet.yaml -n postgres`
 `kubectl apply -f service.yaml -n postgres`
+```
 
 4. Write data to postgres in minikube:
 Run connect.py in code environment to write data to postgres (Note: Correct the csv file path and connect to postgres)
