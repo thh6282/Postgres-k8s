@@ -13,9 +13,10 @@ table_names = ["hrloc", "hrjbtl", "humres"]
 
 for csv_file_path, table_name in zip(csv_file_paths, table_names):
     df = pd.read_csv(csv_file_path, low_memory=False)
-
-# Convert from DataFrame to DB PostgreSQL
-df.to_sql(table_name, db_connection, index=False, if_exists='replace')
+    #create table in PostgreSQL
+    df.head(0).to_sql(table_name, db_connection, index=False, if_exists='replace')  #truncates the table
+    # Convert from DataFrame to DB PostgreSQL
+    df.to_sql(table_name, db_connection, index=False, if_exists='replace')
 
 # close connection
 db_connection.dispose()
