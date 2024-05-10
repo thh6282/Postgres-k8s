@@ -36,6 +36,6 @@ Install according to the link: https://kubernetes.io/docs/tasks/tools/install-ku
 ## 4. Write data to postgres in minikube:
 
 
-Run connect.py in code environment to write data to postgres (Note: Correct the csv file path and connect to postgres)
+Run connect.py in code environment to write data to postgres (Note: Correct the csv file path and ip address postgres)
 
 
